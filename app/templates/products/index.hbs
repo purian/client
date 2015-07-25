@@ -1,13 +1,34 @@
+
 <ul>
-    {{#each product in model}}
-        <li>
-            {{#link-to 'product' product}}
-                {{product.name}},
-                {{product.sku}}
-                {{product.category}}
-            {{/link-to}}
-        </li>
-    {{else}}
-        <li>No products found.</li>
-    {{/each}}
+
 </ul>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Product Name</th>
+        <th>SKU</th>
+        <th>Category</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each product in model}}
+
+                <tr>
+                <td>
+                {{product.name}}
+                </td>
+                <td>{{product.sku}}</td>
+                <td>{{product.category}}</td>
+                </tr>
+
+    {{else}}
+        <tr class="danger">
+            <td>No products found.</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+
+{{page-numbers content=content}}
+
+
