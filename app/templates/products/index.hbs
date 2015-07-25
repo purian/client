@@ -1,0 +1,13 @@
+<ul>
+    {{#each product in model}}
+        <li>
+            {{#link-to 'product' product}}
+                {{product.name}},
+                {{product.sku}}
+                {{product.category}}
+            {{/link-to}}
+        </li>
+    {{else}}
+        <li>No products found.</li>
+    {{/each}}
+</ul>
