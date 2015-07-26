@@ -1,7 +1,8 @@
 
-<ul>
-
-</ul>
+{{input value=filter type='text' placeholder='Category Filter'}}
+{{#link-to 'products' (query-params category_filter=filter)}}<button type="button">Filter</button>{{/link-to}}
+{{#link-to 'products' }}<button type="button" {{action clearFilter}}>Clear Filter</button>{{/link-to}}
+<br>
 <table class="table">
     <thead>
     <tr>
@@ -15,7 +16,9 @@
 
                 <tr>
                 <td>
+                {{#link-to 'product' product}}
                 {{product.name}}
+                {{/link-to}}
                 </td>
                 <td>{{product.sku}}</td>
                 <td>{{product.category}}</td>

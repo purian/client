@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-9">
+            <div class="well">
+                <form {{action save on="submit"}} class="form-horizontal">
+                    <legend>Edit Product</legend>
+
+                    {{partial "product_edit_fields"}}
+
+                    <br>
+                    <br>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button class="btn" {{action cancel}}>Cancel</button>
+                    </div>
+                </form>
+                </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="control-group">
+    <label class="control-label" for="name">Name</label>
+    <div class="controls ">
+        {{view Ember.TextField valueBinding="model.name" id="name" placeholder="Product name" required="true" class="form-control"}}
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="sku">SKU</label>
+    <div class="controls">
+        {{view Ember.TextField valueBinding="model.sku" id="sku" placeholder="Product SKU" required="true" class="form-control"}}
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label" for="category">Category</label>
+    <div class="controls">
+        {{view Ember.TextField valueBinding="model.category" id="category" placeholder="Product Category" required="true" class="form-control"}}
+    </div>
+</div>
